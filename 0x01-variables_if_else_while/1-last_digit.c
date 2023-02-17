@@ -19,7 +19,7 @@ int main(void)
 	if (rem < 6 && rem != 0)
 	{
 		printf("Last digit of %d is %d and ", n, rem);
-		printf("is less than 6 but not zero\n");
+		printf("is less than 6 but not 0\n");
 	}
 	else if (rem > 5)
 	{
@@ -29,7 +29,7 @@ int main(void)
 	else if (rem == 0)
 	{
 		printf("Last digit of %d is %d and ", n, rem);
-		printf("is zero\n");
+		printf("is 0\n");
 	}
 	return (0);
 }
