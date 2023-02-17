@@ -1,19 +1,25 @@
 #include <stdio.h>
 /**
- * main - Returns all possible combos of 2 digits
+ * main - prints all combos of single digit numbers
  * Return: 0
  */
+
 int main(void)
 {
-	int i = '0'
-	
-	for (i = '0', i <=9 '0', i++)
+	int i, j;
+	for (i = 0; i < 9; i++)
 	{
-		putchar(i);
-		for (k = i+1; k <=9; k++)
+		for (j = i+1; j <= 9; j++)
 		{
-			putchar(k);
-
+			putchar('0' + i);
+			putchar('0' + j);
+			if (i < 8)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
+	putchar('\n');
+	return 0;
 }
