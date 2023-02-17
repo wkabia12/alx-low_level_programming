@@ -18,7 +18,7 @@ int main(void)
 	for (; k < 91; k++)
 	{
 		chU = (char)k;
-		putchar(ch);
+		putchar(chU);
 	}
 	putchar('\n');
 	return (0);
