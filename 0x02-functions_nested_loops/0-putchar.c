@@ -12,8 +12,11 @@ int main(void)
 	for (i = 0; i < (int)sizeof(word); i++)
 	{
 		_putchar(word[i]);
+		if (i == 7)
+		{
+			_putchar('\n');
+		}
 
 	}
-	_putchar('\n');
 	return (0);
 }
