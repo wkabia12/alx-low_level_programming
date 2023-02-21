@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * pchar - Prints _putchar
+ * main - Prints _putchar
  * Return: 0
  */
-int pchar(void)
+int main(void)
 {
 	char word[] = "_putchar";
 	int i = 0;
