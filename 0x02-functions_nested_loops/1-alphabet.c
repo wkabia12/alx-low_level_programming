@@ -1,11 +1,15 @@
 #include "main.h"
 
 /**
- * main - print lowercase alphabet
+ * print_alphabet - print lowercase alphabet
  * Return: 0
  */
-int main (void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int i = 'a';
+	for (i = 'a'; i < 123; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
 }
