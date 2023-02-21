@@ -1,17 +1,11 @@
 #include "main.h"
 
 /**
- * main - print lowercase alphabet
+ * main - print lowercase alphabet x10
  * Return: 0
  */
 int main (void)
 {
-	int i = 0;
-	while (i<10)
-	{
-		print_alphabet();
-		_putchar('\n');
-		i++;
-	}
+	print_alphabetx10();
 	return (0);
 }
