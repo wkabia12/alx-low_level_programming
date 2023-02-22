@@ -18,10 +18,13 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
+			else
+			{
 			_putchar(product / 10 + '0');
 			_putchar(product % 10 + '0');
 			_putchar(',');
 			_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}

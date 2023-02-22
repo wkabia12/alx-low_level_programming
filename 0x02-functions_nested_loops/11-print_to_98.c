@@ -18,8 +18,10 @@ void print_to_98(int n)
 	{
 		for (i = n; i > 98; i--)
 		{
-			printf("%d, ", i);
+			_putchar(i);
 		}
 	}
-	printf("98\n");
+	_putchar('9');
+	_putchar('8');
+	_putchar('\n');
 }
