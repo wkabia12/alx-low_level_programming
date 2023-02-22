@@ -4,20 +4,20 @@
  */
 void print_to_98(int n)
 {
-	if (n > 98)
+	int i;
+	if (n <= 98)
 	{
-		for (; n >= 98; n--)
+		for (i = n; i < 98; i++)
 		{
-			_putchar(n + '0');
-			_putchar(',');
+			printf("%d, ", i);
 		}
 	}
-	if (n < 98)
+	else
 	{
-		for (; n <= 98; n++)
+		for (i = n; i > 98; i--)
 		{
-			_putchar(n + '0');
-			_putchar(',');
+			printf("%d, ", i);
 		}
 	}
+	printf("98\n");
 }
