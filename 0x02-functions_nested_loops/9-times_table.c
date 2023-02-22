@@ -19,10 +19,9 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(' ');
 			}
-			else if (j == 9)
+			else if ((i == 0 || i == 1) && j == 9)
 			{
-				_putchar(product / 10 + '0');
-				_putchar(product % 10 + '0');
+				_putchar(product + '0');
 			}
 			else if (product < 10)
 			{
