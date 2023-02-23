@@ -2,6 +2,7 @@
 
 /**
  * print_line - prints lines of lenght n
+ * @n: lenght of line to be drawn
  */
 void print_line(int n)
 {
@@ -13,7 +14,7 @@ void print_line(int n)
 	}
 	else
 	{
-		for(;  i < n; i++)
+		for (;  i < n; i++)
 		{
 			_putchar('_');
 		}
