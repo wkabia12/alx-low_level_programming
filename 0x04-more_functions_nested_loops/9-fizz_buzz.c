@@ -24,10 +24,11 @@ int main(void)
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%i ", i);
 		}
+		if (i != 100)
+			_printf(" ");
 	}
 	printf("\n");
-
 	return (0);
 }
