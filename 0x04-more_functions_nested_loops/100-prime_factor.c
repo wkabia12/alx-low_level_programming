@@ -16,7 +16,7 @@ int main(void)
 		lpf = 2;
 		n /= 2;
 	}
-	for (i = 3; i <= sqrt(n); i += 2)
+	for (i = 3; i <= n**(1/2); i += 2)
 	{
 		while (n % i == 0)
 		{
