@@ -1,9 +1,10 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * fizzBuzz - prints numbers to 100 multples of 3-Fizz, 5-Buzz, both FizzBuzz
+ * main - prints numbers to 100 multples of 3-Fizz, 5-Buzz, both FizzBuzz
+ * Return: 0
  */
-void fizzBuzz(void)
+int main(void)
 {
 	int i = 0;
 
@@ -26,4 +27,7 @@ void fizzBuzz(void)
 			printf("%d ", i);
 		}
 	}
+	printf("\n");
+
+	return (0);
 }
