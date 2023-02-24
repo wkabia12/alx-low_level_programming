@@ -1,11 +1,17 @@
 #include "main.h"
-
+#include <limits.h>
+#include <stdlib.h>
 /**
  * print_number - prints numbers
  * @n: integer to be printed
  */
 void print_number(int n)
 {
+	if (n == INT_MIN)
+	{
+		-putchar('-');
+		n = abs(n);
+	}
 	if (n < 0)
 	{
 		_putchar('-');

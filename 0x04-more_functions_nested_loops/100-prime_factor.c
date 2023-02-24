@@ -1,19 +1,32 @@
-#include "main.h"
+#include <stdio.h>
+#include <math.h>
 
 /**
- * prime_factor - prints largest prime factor
+ * main - prints largest prime factor
+ * Return: 0 ok
  */
-void prime_factor(void)
+int main(void)
 {
-	long int n = 612852475143;
-	int i = 3;
+	long long n = 612852475143;
+	long long lpf = 1;
+	long long i;
 
-	for (; i < sqrt(n); i + 2)
+	while (n % 2 == 0)
 	{
-		if (n % i == 0)
+		lpf = 2;
+		n /= 2;
+	}
+	for (i = 3; i <= sqrt(n); i += 2)
+	{
+		while (n % i == 0)
 		{
+			lpf = i;
 			n /= i;
 		}
 	}
-	printf("%ld/n");
+	if (n > 2)
+		lpf = n;
+
+	printf("%lld\n", lpf);
+	return (0);
 }
