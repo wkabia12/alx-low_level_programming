@@ -12,7 +12,7 @@ int _atoi(char *s)
 	int len = strlen(s);
 	int i, j, count = 0;
 
-	for (; i < len; i++)
+	for (i = 0; i < len; i++)
 	{
 		if (isdigit(s[i]))
 		{
@@ -23,7 +23,7 @@ int _atoi(char *s)
 	}
 	if (count > 0)
 	{
-		for (; j < len; j++)
+		for (j = 0; j < len; j++)
 		{
 			if (isalpha(s[j]))
 			{
