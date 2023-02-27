@@ -5,12 +5,12 @@
 /**
  * _atoi - convert string to integer
  * @s: s array
- * Return: 0
+ * Return: 0 or int
  */
 int _atoi(char *s)
 {
 	int len = strlen(s);
-	int i, j, count, ans = 0;
+	int i, j, count = 0;
 
 	for (; i < len; i++)
 	{
@@ -35,5 +35,5 @@ int _atoi(char *s)
 	}
 	else
 		return (0);
-	ans = atoi(s);
+	return (atoi(s));
 }
