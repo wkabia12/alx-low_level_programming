@@ -7,19 +7,18 @@
  */
 void print_rev(char *s)
 {
-	char rev[1000];
-	int i, j, count = 0;
+	char temp;
+	int i, j, len = 0;
 
-	while (s[count] != '\0')
-	{
-		count++;
-	}
-	j = count - 1;
+	len = strlen(s);
+	j = len - 1;
 
-	for (i = 0; i < count; i++)
+	for (i = 0; i < len / 2; i++)
 	{
-		rev[i] = s[j];
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
 		j--;
 	}
-	puts(rev);
+	puts(s);
 }

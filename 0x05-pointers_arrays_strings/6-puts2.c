@@ -2,26 +2,18 @@
 #include <string.h>
 
 /**
- * puts2 - output every other character
+ * puts2 - output reverse string
  * @str: Pointer argument
  */
 void puts2(char *str)
 {
-	char skip[1000];
-	int i, j, count = 0;
+	int i, len = 0;
 
-	while (str[count] != '\0')
-	{
-		count++;
-	}
+	len = strlen(str);
 
-	for (i = 0; i < count; i++)
+	for (i = 0; i < len; i + 2)
 	{
-		if (i / 2 == 0)
-		{
-			skip[j] = str[i];
-			j++;
-		}
+		_putchar(str[i]);
 	}
-	str = skip;
+	_putchar('\n');
 }
