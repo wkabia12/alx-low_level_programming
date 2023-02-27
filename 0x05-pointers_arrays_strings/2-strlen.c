@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * swap_int - resets number to 98
+ * _strlen - return lenght of string
  * @s: Pointer argument
  * Return: string lenght
  */
