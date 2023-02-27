@@ -2,10 +2,10 @@
 #include <string.h>
 
 /**
- * print_rev - output reverse string followed by new line
+ * rev_string - output reverse string followed by new line
  * @s: Pointer argument
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	char rev[500];
 	int i, j, count = 0;
@@ -21,5 +21,5 @@ void print_rev(char *s)
 		rev[i] = s[j];
 		j--;
 	}
-	puts(rev);
+	s = rev;
 }
