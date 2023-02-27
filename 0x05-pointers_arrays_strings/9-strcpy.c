@@ -7,8 +7,8 @@
  * @src: src array
  * Return: dest pointer
  */
-char _strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	strcpy(dest, src);
-	return (*dest);
+	return (dest);
 }
