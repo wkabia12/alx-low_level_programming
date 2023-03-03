@@ -19,9 +19,8 @@ char *leet(char *s)
 			if (s[j] == letterUpr[i] || s[j] == letterLow[i])
 			{
 				s[j] = encode[i];
-			}
-			else
 				continue;
+			}
 		}
 	}
 	return (s);

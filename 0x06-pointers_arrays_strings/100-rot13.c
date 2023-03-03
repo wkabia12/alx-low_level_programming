@@ -20,9 +20,8 @@ char *rot13(char *s)
 			if (s[i] == alpha[j])
 			{
 				s[i] = rot13[j];
-			}
-			else
 				continue;
+			}
 		}
 	}
 	return (s);

@@ -8,6 +8,8 @@
 char *cap_string(char *s)
 {
 	int i = 0;
+	char sep[] = {' ', '\t', '\n', ';', '.', '!', '?','"', '(', ')', '{', '}', '\0'}; 
+	char temp[2];
 
 	while (s[i] != '\0')
 	{
@@ -18,7 +20,8 @@ char *cap_string(char *s)
 		}
 		else
 		{
-			if ((ispunct(s[i]) || isspace(s[i])) && isalpha(s[i + 1]))
+			temp[0] = s[i];
+			if (strstr(sep,temp) && isalpha(s[i + 1]))
 			{
 				s[i + 1] = toupper(s[i + 1]);
 				i++;
