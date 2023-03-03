@@ -13,14 +13,14 @@ char *rot13(char *s)
 	int len2 = strlen(alpha);
 
 
-	for (i = 0; i < len - 1; i++)
+	for (i = 0; i < len; i++)
 	{
-		for (j = 0; j < len2 - 1; j++)
+		for (j = 0; j < len2; j++)
 		{
 			if (s[i] == alpha[j])
 			{
 				s[i] = rot13[j];
-				continue;
+				break;
 			}
 		}
 	}
