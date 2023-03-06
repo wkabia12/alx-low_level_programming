@@ -9,5 +9,6 @@
 char *_strchr(char *s, char c)
 {
 	char *found = strchr(s, c);
+
 	return (found);
 }
