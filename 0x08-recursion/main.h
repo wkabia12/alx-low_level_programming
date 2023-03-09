@@ -14,23 +14,9 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
 
-int _sqrt_helper(int n, int start, int end)
-{
-	int mid;
 
-	if (start > end)
-		return -1;
-
-	mid = (start + end) / 2;
-
-	if (mid * mid == n)
-		return mid;
-	else if (mid * mid > n)
-		return _sqrt_helper(n, start, mid - 1);
-	else
-		return _sqrt_helper(n, mid + 1, end);
-}
 int prime_helper(int n, int i)
 {
 	if (n <= 2)
@@ -41,6 +27,7 @@ int prime_helper(int n, int i)
 		return 1;
 	return (prime_helper(n, i + 1));
 }
+
 int palindrome_helper(char *s, int start, int end)
 {
 	if (start >= end)
