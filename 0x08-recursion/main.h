@@ -41,18 +41,13 @@ int prime_helper(int n, int i)
 		return 1;
 	return (prime_helper(n, i + 1));
 }
-char *palindrome_helper(char *s)
+int palindrome_helper(char *s, int start, int end)
 {
-	char rev[50];
-	int i = 0;
-
-	if (*s != '\0')
-	{
-		palindrome_helper(s + 1);
-		rev[i] = (*s);
-		i++;
-	}
-	strcpy(s, rev);
-	return (s);
+	if (start >= end)
+		return 1;
+	else if (s[start] != s[end])
+		return 0;
+	else
+		return (palindrome_helper(s, start + 1, end - 1));
 }
 #endif /* MAIN_H */

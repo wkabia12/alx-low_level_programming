@@ -7,8 +7,7 @@
  */
 int is_palindrome(char *s)
 {
-	if (s == palindrome_helper(s))
-		return (1);
-	else
-		return (0);
+	int len = strlen(s);
+
+	return (palindrome_helper(s, 0, len - 1));
 }
