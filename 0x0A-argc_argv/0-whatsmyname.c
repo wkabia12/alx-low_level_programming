@@ -1,11 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - prints it's own name
  * @argc: number of arguments passed
  * @argv: array of arguments passed
+ * Return: 0
  */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", argv[argc - argc]);
+	return (0);
 }
