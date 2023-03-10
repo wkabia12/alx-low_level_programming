@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int dino[] = {25, 10, 5, 2, 1};
 	int i, temp, count = 0;
 
-	if (argc > 2)
+	if (argc > 2 || argc < 2)
 	{
 		printf("Error\n");
 		return (1);
