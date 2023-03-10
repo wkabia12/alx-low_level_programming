@@ -1,3 +1,5 @@
 #!/bin/bash
-gcc -c *.c
-ar -rc liball.a *.a
+set -e
+
+gcc -c *.c || exit 1
+ar -rc liball.a *.a || exit 1
