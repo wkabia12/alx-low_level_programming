@@ -4,7 +4,7 @@
  * create_array - creates array of size initialized to c
  * @size: number of elements
  * @c: xter to be printed
- * Return: 0
+ * Return: pointer to array or NULL otherwise
  */
 char *create_array(unsigned int size, char c)
 {
