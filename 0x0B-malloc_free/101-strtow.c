@@ -8,11 +8,16 @@
 char **strtow(char *str)
 {
 	char **temp, *ptr;
-	int i = 0;
+	int i = 0, tokn = 0;
 
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
-	temp = (char **) malloc(sizeof(char *));
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+			tokn++;
+	}
+	temp = (char **) malloc((tokn + 1) * sizeof(char *));
 	if (temp == NULL)
 		return (NULL);
 
@@ -23,12 +28,13 @@ char **strtow(char *str)
 		temp[i] = (char *) malloc(strlen(ptr) * sizeof(char));
 		if (temp[i] == NULL)
 		{
-			free(temp);
+			free(temp[i]);
 			return (NULL);
 		}
-		temp[i] = ptr;
+		strcpy(temp[i], ptr);
 		ptr = strtok(NULL, " ");
 		i++;
 	}
+	temp[tokn] = NULL;
 	return (temp);
 }
