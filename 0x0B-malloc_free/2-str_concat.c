@@ -9,12 +9,13 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;
+	char empty[] = "";
 	int len;
 
 	if (s1 == NULL)
-		strcpy(s1, "");
+		strcpy(s1, empty);
 	if (s2 == NULL)
-		strcpy(s2, "");
+		strcpy(s2, empty);
 
 	len = (strlen(s1) + strlen(s2) + 1);
 	concat = malloc(len * sizeof(char));
