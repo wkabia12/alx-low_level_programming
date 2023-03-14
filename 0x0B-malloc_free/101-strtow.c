@@ -8,7 +8,7 @@
 char **strtow(char *str)
 {
 	char **temp, *ptr;
-	int i = 0, tokn = 0;
+	int i = 0, j = 0, tokn = 0;
 
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
@@ -25,10 +25,12 @@ char **strtow(char *str)
 
 	while (ptr != NULL)
 	{
-		temp[i] = (char *) malloc(strlen(ptr) * sizeof(char));
+		temp[i] = (char *) malloc((strlen(ptr) + 1) * sizeof(char));
 		if (temp[i] == NULL)
 		{
-			free(temp[i]);
+			for (j = 0; j < i; j++)
+				free(temp[j]);
+			free(temp);
 			return (NULL);
 		}
 		strcpy(temp[i], ptr);
