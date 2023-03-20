@@ -2,7 +2,7 @@
 
 /**
  * init_dog - initializes pointer variable of type dog
- * @d: initalized var
+ * @d: initalized ptr
  * @name:  name of dog
  * @age: age of dog
  * @owner: name of owner
