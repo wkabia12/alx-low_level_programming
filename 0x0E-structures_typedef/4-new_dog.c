@@ -5,44 +5,43 @@
  * @name:  name of dog
  * @age: age of dog
  * @owner: name of owner
- * Return: ptr of type dog
+ * Return: dog ptr of type dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *ptr;
-	size_t name_len = strlen(name) + 1;
-	size_t owner_len = strlen(owner) + 1;
+	size_t name_len = strlen(name);
+	size_t owner_len = strlen(owner);
+	dog_t *dog;
 
 	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
 
-	ptr = malloc(sizeof(dog_t));
-	if (ptr == NULL)
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+		return (NULL);
+
+	dog->name = malloc(name_len + 1);
+	if (dog->name == NULL)
 	{
-		free(ptr);
+		free(dog);
 		return (NULL);
 	}
 
-	ptr->name = malloc(name_len);
-	if (ptr->name == NULL)
+	strncpy(dog->name, name, name_len + 1);
+	dog->name[name_len] = '\0';
+
+	dog->owner = malloc(owner_len + 1);
+	if (dog->owner == NULL)
 	{
-		free(ptr->name);
-		free(ptr);
+		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
-	strncpy(ptr->name, name, name_len);
-	ptr->name[name_len - 1] = '\0';
 
-	ptr->owner = malloc(owner_len);
-	if (ptr->owner == NULL)
-	{
-		free(ptr->owner);
-		free(ptr);
-		return (NULL);
-	}
-	strncpy(ptr->owner, owner, owner_len);
-	ptr->name[owner_len - 1] = '\0';
+	strncpy(dog->owner, owner, owner_len + 1);
+	dog->owner[owner_len] = '\0';
 
-	ptr->age = age;
-	return (ptr);
+	dog->age = age;
+
+	return (dog);
 }
