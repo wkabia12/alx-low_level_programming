@@ -21,7 +21,14 @@ int main(int argc, char **argv)
 
 	operation = get_op_func(argv[2]);
 
-	printf("%d\n", operation(a, b));
+	if (operation != NULL)
+		printf("%d\n", operation(a, b));
+	else
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
 
 	return (0);
 }
