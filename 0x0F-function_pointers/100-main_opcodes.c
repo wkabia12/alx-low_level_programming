@@ -24,8 +24,8 @@ int main(int argc, char *argv[])
 	p = (unsigned char *)main;
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02x ", *(p+i));
+		printf("%02x ", *(p + i));
 	}
 	printf("\n");
-	return 0;
+	return (0);
 }
