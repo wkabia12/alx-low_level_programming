@@ -21,7 +21,7 @@ void print_binary(unsigned long int n)
 		printf("1");
 		lead_zeros = 0;
 	}
-	else if(!lead_zeros) 
+	else if (!lead_zeros)
 		printf("0");
 	cmplt >>= 1;
 	}
