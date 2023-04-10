@@ -6,7 +6,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int cmplt = 1UL << (sizeof(unsigned long int) - 1);
+	unsigned long int cmplt = 1UL << (sizeof(n) * 8 - 1);
+	int lead_zeros = 1;
 
 	if (n == 0)
 	{
@@ -16,8 +17,11 @@ void print_binary(unsigned long int n)
 	while (cmplt > 0)
 	{
 	if (n & cmplt)
+	{
 		printf("1");
-	else
+		lead_zeros = 0;
+	}
+	else if(!lead_zeros) 
 		printf("0");
 	cmplt >>= 1;
 	}
