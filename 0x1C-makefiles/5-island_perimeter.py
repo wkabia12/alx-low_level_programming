@@ -7,25 +7,20 @@ def island_perimeter(grid):
     rows = len(grid)
     cols = len(grid[0])
     pmtr = 0
-    adj_wtr = 0
 
     for row in range(rows):
         for col in range(cols):
-            if grid[row][col] == 1:
-                adj_wtr = 4
+            if grid[row][col] == 0:
 
-            if row > 0 and grid[row - 1][col] == 1:
-                adj_wtr -= 1
+                if row > 0 and grid[row - 1][col] == 1:
+                    pmtr += 1
 
-            if row < rows - 1 and grid[row + 1][col] == 1:
-                adj_wtr -= 1
+                if row < rows - 1 and grid[row + 1][col] == 1:
+                    pmtr += 1
 
-            if col > 0 and grid[row][col - 1] == 1:
-                adj_wtr -= 1
+                if col > 0 and grid[row][col - 1] == 1:
+                    pmtr += 1
 
-            if col < cols - 1 and grid[row][col + 1] == 1:
-                adj_wtr -= 1
-
-            pmtr += adj_wtr
-
+                if col < cols - 1 and grid[row][col + 1] == 1:
+                    pmtr += 1
     return pmtr
